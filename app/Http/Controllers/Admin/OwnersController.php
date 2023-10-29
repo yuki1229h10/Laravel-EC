@@ -29,15 +29,18 @@ class OwnersController extends Controller
         echo $date_parse;
 
         $e_all = Owner::all();
-        $q_get = DB::table('owners')->select('name')->get();
-        $q_first = DB::table('owners')->select('name')->first();
+        $q_get = DB::table('owners')->select('name', 'created_at')->get();
 
-        $c_test = collect([
-            'name' => 'test'
-        ]);
+        // $q_first = DB::table('owners')->select('name')->first();
 
-        var_dump($q_first);
-        dd($e_all, $q_get, $q_first, $c_test);
+        // $c_test = collect([
+        // 'name' => 'test'
+        // ]);
+
+        // var_dump($q_first);
+
+        // dd($e_all, $q_get);
+        return view('admin.owners.index', compact('e_all', 'q_get'));
     }
 
     /**
