@@ -2,10 +2,10 @@
 
 
 @php
-    if ($status === 'info') {
+    if (session('status') === 'info') {
         $bgColor = 'bg-blue-300';
     }
-    if ($status === 'error') {
+    if (session('status') === 'alert') {
         $bgColor = 'bg-red-500';
     }
 @endphp
