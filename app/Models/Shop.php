@@ -10,6 +10,14 @@ class Shop extends Model
 {
     use HasFactory;
 
+    public $fillable = [
+        'owner_id',
+        'name',
+        'information',
+        'filename',
+        'is_selling',
+    ];
+
     public function owner()
     {
         return $this->belongsTo(Owner::class);
