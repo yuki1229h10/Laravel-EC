@@ -20,7 +20,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sa ns antialiased">
     <div class="min-h-screen bg-gray-100">
         @if (auth('admin')->user())
             @include('layouts.admin-navigation')
