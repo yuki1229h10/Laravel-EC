@@ -58,6 +58,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/owner.php'));
 
             Route::prefix('/')
+                // asは、routeにuserを書く際に用いる。
                 ->as('user.')
                 ->middleware('web')
                 ->namespace($this->namespace)
