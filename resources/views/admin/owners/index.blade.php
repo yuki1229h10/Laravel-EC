@@ -39,7 +39,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{-- @foreach ($owners as $owner)
+                                        @foreach ($owners as $owner)
                                             <tr>
                                                 <td class="md:px-4 py-3">{{ $owner->name }}</td>
                                                 <td class="md:px-4 py-3">{{ $owner->email }}</td>
@@ -60,14 +60,14 @@
                                                     </td>
                                                 </form>
                                             </tr>
-                                        @endforeach --}}
+                                        @endforeach
                                     </tbody>
                                 </table>
-                                {{-- {{ $owners->links() }} --}}
+                                {{ $owners->links() }}
                             </div>
                         </div>
                     </section>
-                    エロクアント
+                    {{-- エロクアント
                     @foreach ($e_all as $e_owner)
                         {{ $e_owner->name }}
                         {{ $e_owner->created_at->diffForHumans() }}
@@ -77,7 +77,7 @@
                     @foreach ($q_get as $q_owner)
                         {{ $q_owner->name }}
                         {{ Carbon\Carbon::parse($q_owner->created_at)->diffForHumans() }}
-                    @endforeach
+                    @endforeach --}}
                 </div>
             </div>
         </div>
